@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gui name="kblackbox"
+     version="14"
+     xmlns="http://www.kde.org/standards/kxmlgui/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
+                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
+	<MenuBar>
+		<Menu name="game">
+			<Action name="game_tutorial" />
+			<Action name="game_sandbox" />
+		</Menu>
+		<Menu name="move">
+			<Action name="move_done" />
+		</Menu>
+	</MenuBar>
+	<ToolBar name="mainToolBar">
+		<Action name="game_new" />
+		<Action name="game_tutorial" />
+		<Separator />
+		<Action name="game_pause" />
+		<Action name="move_solve" />
+	</ToolBar>
+</gui>

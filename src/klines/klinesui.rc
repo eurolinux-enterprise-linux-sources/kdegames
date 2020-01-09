@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gui name="klines"
+     version="7"
+     xmlns="http://www.kde.org/standards/kxmlgui/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
+                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
+
+  <MenuBar>
+    <Menu name="settings">
+      <Action name="show_next" />
+    </Menu>
+    <Menu name="navigation">
+      <text>Navigation</text>
+      <Action name="navi_left" />
+      <Action name="navi_right" />
+      <Action name="navi_up" />
+      <Action name="navi_down" />
+      <Action name="navi_select" />
+    </Menu>
+  </MenuBar>
+
+  <ToolBar name="mainToolBar">
+    <Action name="game_new" />
+    <Separator />
+    <Action name="move_undo" />
+    <Action name="move_end_turn" />
+  </ToolBar>
+
+  <State name="init">
+    <disable>
+      <Action name="move_undo" />
+    </disable>
+  </State>
+
+  <State name="not_undoable">
+    <disable>
+      <Action name="move_undo" />
+    </disable>
+  </State>
+
+  <State name="undoable">
+    <enable>
+      <Action name="move_undo" />
+    </enable>
+  </State>
+</gui>

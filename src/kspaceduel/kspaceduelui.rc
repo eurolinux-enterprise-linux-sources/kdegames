@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gui name="kspaceduel"
+     version="6"
+     xmlns="http://www.kde.org/standards/kxmlgui/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
+                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
+
+<MenuBar>
+   <Menu name="game"><text>&amp;Game</text>
+      <Action name="new_round" append="new_merge"/>
+   </Menu>
+</MenuBar>
+
+<ToolBar name="mainToolBar"><text>Main Toolbar</text>
+   <Action name="game_new"/>
+   <Action name="new_round"/>
+   <Action name="game_pause"/>
+</ToolBar>
+
+</gui>

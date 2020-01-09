@@ -1,0 +1,475 @@
+<ui version="4.0" >
+ <class>skindefinition</class>
+ <widget class="QDockWidget" name="skindefinition" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>328</width>
+    <height>841</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Skin Definition</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents" >
+   <layout class="QVBoxLayout" name="verticalLayout_7" >
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" >
+      <item>
+       <widget class="QLabel" name="label_3" >
+        <property name="text" >
+         <string>Skin name:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="skinNameLineEdit" >
+        <property name="toolTip" >
+         <string>The skin's short name</string>
+        </property>
+        <property name="statusTip" >
+         <string/>
+        </property>
+        <property name="whatsThis" >
+         <string>Type here the skin's short name. This should be a identifier-like string</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item>
+       <widget class="QLabel" name="label" >
+        <property name="text" >
+         <string>Width x Height</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="KIntNumInput" name="widthLineEdit" >
+        <property name="toolTip" >
+         <string>Map's width</string>
+        </property>
+        <property name="whatsThis" >
+         <string>This is the map's width. The map SVG element will be by default drawn on an image of this width. All positions on the map are expressed relatively to this dimension.
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2" >
+        <property name="text" >
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="KIntNumInput" name="heightLineEdit" >
+        <property name="toolTip" >
+         <string>Map's height</string>
+        </property>
+        <property name="whatsThis" >
+         <string>This is the map's height. The map SVG element will be by default drawn on an image of this height All positions on the map are expressed relatively to this dimension.
+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox" >
+      <property name="sizePolicy" >
+       <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title" >
+       <string>Map Font</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5" >
+       <item>
+        <widget class="KFontRequester" name="fontrequester" >
+         <property name="toolTip" >
+          <string>Font used to draw countries names</string>
+         </property>
+         <property name="whatsThis" >
+          <string>This font will be used to draw the countries names on the map</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" >
+         <item>
+          <widget class="QLabel" name="label_5" >
+           <property name="text" >
+            <string>Fg:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KColorButton" name="fgcolorbutton" >
+           <property name="toolTip" >
+            <string>Foreground color for countries names</string>
+           </property>
+           <property name="whatsThis" >
+            <string>This color will be used to draw the foreground of the countries names on the map</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6" >
+           <property name="text" >
+            <string>Bg:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KColorButton" name="bgcolorbutton" >
+           <property name="toolTip" >
+            <string>Background color for countries names</string>
+           </property>
+           <property name="whatsThis" >
+            <string>This color will be used to draw the background of the countries names on the map</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4" >
+      <property name="text" >
+       <string>Description:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="descriptionTextEdit" >
+      <property name="sizePolicy" >
+       <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip" >
+       <string>Human readable description of the skin</string>
+      </property>
+      <property name="whatsThis" >
+       <string>Describe here the skin, its style, its story, the intent of its author(s), etc.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="KTabWidget" name="ktabwidget" >
+      <property name="whatsThis" >
+       <string/>
+      </property>
+      <property name="currentIndex" >
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="tabSprites" >
+       <attribute name="title" >
+        <string>Sprites</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2" >
+        <item>
+         <widget class="QLabel" name="label_7" >
+          <property name="text" >
+           <string>Edit the sprites definition
+in the right dock</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabNationalities" >
+       <attribute name="title" >
+        <string>Nationalities</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6" >
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8" >
+          <item>
+           <widget class="KPushButton" name="newNationalityButton" >
+            <property name="toolTip" >
+             <string>Creates a new Nationality</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to add a new nationality. You will be prompted for its name.</string>
+            </property>
+            <property name="text" >
+             <string>New Nationality</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>148</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="KPushButton" name="deleteNationalityButton" >
+            <property name="toolTip" >
+             <string>Removes the currently selected nationality</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to remove the currently selected nationality. You will be asked for confirmation.</string>
+            </property>
+            <property name="text" >
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="nationalitieslist" >
+          <property name="toolTip" >
+           <string>Nationalities list</string>
+          </property>
+          <property name="whatsThis" >
+           <string>This list shows the nationalities defined.
+
+Each nationality name should be unique. Select a nationality and edit its details in the right dock.
+
+During game, each player must choose a nationality. Then you should add at least as much nationalities than the maximum number of players for this skin.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabCountries" >
+       <attribute name="title" >
+        <string>Countries</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout" >
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5" >
+          <item>
+           <widget class="KPushButton" name="newCountryButton" >
+            <property name="toolTip" >
+             <string>Creates a new country</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to add a new country. You will be prompted for its name.</string>
+            </property>
+            <property name="text" >
+             <string>New Country</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>148</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="KPushButton" name="deleteCountryButton" >
+            <property name="toolTip" >
+             <string>Removes the currently selected country</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to remove the currently selected country. You will be asked for confirmation.</string>
+            </property>
+            <property name="text" >
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="countrieslist" >
+          <property name="toolTip" >
+           <string>Countries list</string>
+          </property>
+          <property name="whatsThis" >
+		  <string>This list shows the countries defined.
+
+Each country name should be unique. Select a country and edit its details in the right dock.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabContinents" >
+       <attribute name="title" >
+        <string>Continents</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3" >
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6" >
+          <item>
+           <widget class="KPushButton" name="newContinentButton" >
+            <property name="toolTip" >
+             <string>Creates a new continent</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to add a new continent. You will be prompted for its name.</string>
+            </property>
+            <property name="text" >
+             <string>New Continent</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>148</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="KPushButton" name="deleteContinentButton" >
+            <property name="toolTip" >
+             <string>Removes the currently selected continent</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to remove the currently selected continent. You will be asked for confirmation.</string>
+            </property>
+            <property name="text" >
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="continentslist" >
+          <property name="toolTip" >
+           <string>Continents list</string>
+          </property>
+          <property name="whatsThis" >
+		  <string>This list shows the continents defined.
+
+Each continent name should be unique. Select a continent and edit its details in the right dock.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabGoals" >
+       <attribute name="title" >
+        <string>Goals</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4" >
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7" >
+          <item>
+           <widget class="KPushButton" name="newGoalButton" >
+            <property name="toolTip" >
+             <string>Creates a new goal</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to add a new goal. It will be named automatically.</string>
+            </property>
+            <property name="text" >
+             <string>New Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>148</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="KPushButton" name="deleteGoalButton" >
+            <property name="toolTip" >
+             <string>Removes the currently selected goal</string>
+            </property>
+            <property name="whatsThis" >
+             <string>Click here to remove the currently selected goal. You will be asked for confirmation.</string>
+            </property>
+            <property name="text" >
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="goalslist" >
+          <property name="toolTip" >
+           <string>Goals list</string>
+          </property>
+          <property name="whatsThis" >
+		  <string>This list shows the goals defined.
+
+Each goal name should be unique. Select a goal and edit its details in the right dock.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KColorButton</class>
+   <extends>QPushButton</extends>
+   <header>kcolorbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KFontRequester</class>
+   <extends>QWidget</extends>
+   <header>kfontrequester.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KIntNumInput</class>
+   <extends>QWidget</extends>
+   <header>knuminput.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>ktabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

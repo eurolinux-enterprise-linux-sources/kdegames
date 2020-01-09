@@ -1,0 +1,39 @@
+BUGS:
+=====
+
+* Pause the game when you just lose, when the ball shows up it's on top of the canvas... (wrong z values)
+* Sometimes ti bounces twice when it shouldn't
+* Unneeded resizes and repaints on startup
+
+
+TODO:
+=====
+
+== Code Refactoring ==
+* Item: 
+    - don't use inheritance
+* Put constants used only in one place out of globals.h 
+* use m_ for all data members
+* add const keyboard where appropriate
+
+== Short Term ==
+* Add feedback to know when a gift has been catched.
+* Ask confirmation on close if a game is running
+* Never move the cursor farther then what moves the bar.
+
+== Mid Term ==
+* Try to port to QGraphicsScene
+* Add gui to load new levesets
+* Add sounds
+* Add nice visual effects
+* Profiling
+
+== Long Term ==
+* Level editor
+* Add a border (?)
+* Add gifts to be able to shoot at the bricks (?)
+* Full screen mode
+  - mouse sensibility option (when in full screen mode)
+  - screen resolution option (when in full screen mode)
+* Add demo mode with AI playing
+* Add optional use of openGL

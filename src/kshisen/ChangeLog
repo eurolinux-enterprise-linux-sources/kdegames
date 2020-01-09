@@ -1,0 +1,175 @@
+Changes in 1.7.0:
+ * fix typo in cheat notification dialog
+ * fix bug where game was playable in pause mode
+ * add Game Over screen to not start the next game without user interaction
+ * game can now be resumed by clicking on the board
+ * port to KScoreDialog
+    - there is now one highscore section for each board size
+    - the gravity option has its separate column now
+ * port to KGameClock to solve several issues
+ * break Pause and Game Over messages if they are too long or the window too
+   small
+ * add a translucent layer to Pause and Game Over messages to make them
+   more readable on darker backgrounds
+ * enforce chineseStyle gameplay for "reduced" tile sets
+    There are tile sets, that have only one tile for e.g. the flowers group.
+    If these tile sets are played in none-chineseStyle, this one tile face
+    appears too often and not every tile matches another one with the same
+    face because they are technically different (e.g different flowers).
+    The solution is to enforce chineseStyle gameplay for tile sets that are
+    known to be reduced. Those are Egypt and Alphabet for now.
+
+ * some changes in coding style and naming schema to be more close to the
+   kdelibs style
+ * some general refactoring
+
+Changes in 1.6.1:
+ * Remove "prefer unscaled tiles" option, as it is meaningless with SVG
+   tilesets.
+ * Use shared KMahjonggBackground class from libkmahjongg.
+ * Fix crash when repeatedly requesting hints. (bug:139070)
+ * KConfigGroup API porting
+ * KShisen now has configurable backgrounds and tilesets, shared with
+   KMahjongg!
+ * Implements the chinese style match for flowers and seasons, consistent
+   with Kmahjongg and the more traditional game rules.
+ * new KHighScore API
+ * started implemented the "tiles can slide" rule
+ * The user is now asked how to perform a move if there are multiple ways for
+   the requested tiles.
+ * Change label for the settings for the Tile can slide rule.
+ * Little rewrite of the Gravity code.
+ * Notify the user when he made at time good enough to be recorded in the
+   highscores if he didn't cheated using Hint or Undo. (bug:139915)
+ * Added some user notice and feedback in the status bar (bug:121808)
+ * Fixed statusbar layout issue by switching from insertItem to addWidget
+ * The game now restarts on changing the options Chinese Style
+   and if started playing on change of the Tiles Can Slide option.
+ * Remove frames around status bar items.
+ * Add 'New' button to toolbar
+ * showHighscore(): fixed wrong usage of KDialog
+ * getPlayerName(): fixed wrong usage of KDialog
+ * Conditionally use update instead of repaint when drawing the board. This
+   speeds up substantially the tile selection with old hardware.
+ * Use games-config-* icon for configuration pane
+ * Added sounds to some of the games. More sounds to come.
+ * "Game -> Restart Game" resets the game timer now (bug:144476)
+ * also clear the redo history when resetting the current game
+
+
+Many changes due to KDE3 -> KDE4 porting efforts went into 1.6.0
+
+
+2004-05-14  Benjamin Meyer (v.1.5.1)
+  * Moved settings into a KConfigXT dialog.
+
+2003-05-23  Dave Corrie  <kde@davecorrie.com> (v.1.4.90)
+
+	* GUI cleanup
+	* Double-buffer painting
+	* Replaced paused pixmap with i18n-friendly text
+	* Code cleanup
+	* Added 'Prefer Unscaled Tiles' feature
+	* Removed 'Is Game Solvable?' feature (it didn't work). It
+	  will be re-instated when a suitable algorithm is present
+	* Fix bug 53893: Gravity should be applied before calculating hints
+
+2002-11-27  Dave Corrie  <kde@davecorrie.com> (v.1.4.1)
+
+	In conjunction with Jason Lane:
+
+	* Move tile handling (loading/scaling/highlighting etc) into
+	  separate class (class TileSet)
+	* Permit resize of playing window
+	* TODO: game startup optimization, double buffering, remove
+	  paused icon (not i18n friendly)
+
+2002-08-01  Dave Corrie  <kde@davecorrie.com> (v.1.4)
+
+	Recent changes of note. (Does not list all the changes that
+	happened in the last three years!)
+
+	* [Andreas Beckermann] make keybindings configurable
+	* [Jason Lane] statusbar shows number of tiles remaining
+	* [Jason Lane] smoothScale tiles when shrinking
+	* [Jason Lane] remove need for separate tile mask pixmap
+	* [Jason Lane] reset "cheat mode" flag when changing board
+	  size or difficulty level
+	* unicode names are now shown correctly in highscore table
+	* improved speed of layout calculation
+	* reduced flicker when highlighting/unhighlighting tiles
+	* cache current tile scale value
+	* FINALLY fix undo/redo in gravity mode
+
+1999-06-19  Mario Weilguni  <mweilguni@kde.org> (v.1.3)
+
+	* tiles now have a mask, better drawing
+	* pausing games is now possible, but the pixmap should
+	  be i18n'ed by some means
+	* fixed undo/redo in combination with gravity
+	* fixed a mysterious undo bug in combination with gravity
+	* prepared for 2.0 (hopefully)
+
+1999-04-09  Mario Weilguni  <mweilguni@kde.org> (v.1.2.2)
+
+	* fixed another bug in writeHighscore
+
+1999-04-04  Mario Weilguni  <mweilguni@kde.org> (v.1.2.1)	
+
+	* replace all locale->translate with i18n
+	* fixed a bug in the writeHighscore method
+
+1999-03-31  Mario Weilguni  <mweilguni@kde.org> (v.1.2)
+
+	* added gravity. 
+	* TODO: gravity and the check for unsolvable games do not work
+	together
+	* fixed menu accelerator
+
+1999-01-03  Mario Weilguni  <mweilguni@kde.org> (v.1.1)
+
+	* some board sizes did not match the entry shown in the
+	menu. Fixed.
+	* fixed a few warnings with egcs
+	* removed my initial highscore
+
+1998-07-17  Mario Weilguni  <mweilguni@kde.org>
+	
+	* moved to version 1.0 (it´s stable enough now)
+
+1998-04-10  Mario Weilguni  <mweilguni@kde.org>
+
+	* better highscore management. highscores are now score-based, not
+	time based
+	* board.cpp: fixed some bugs
+	* the game doesn´t ask anymore for a name if the score
+	  is not good enough for the hall of fame	
+
+0.2.1:
+  * [Robert Williams]  Added getHelpMenu()
+  * [Robert Williams]  Added version.h
+
+0.2:	added this changelog
+
+	fixed a bug in the pathfinder (reported and fixed
+	by Stephane Alnet <alnet@u-picardie.fr>)
+
+	fixed a bug in the Board::lighten() function on 8-bit
+	displays. Reported by Marc Diefenbruch 
+	<md@filesvr1.informatik.uni-essen.de>
+
+	Added a "Hall of Fame", mostly taken from kreversi.
+
+	Added "About Qt" to keep the Trolls happy
+
+	Fixed that "player-has-won-and-must-go-to-the-bathroom"-bug
+	(the elapsed time was taken after getPlayerName() instead
+	of taking it before)
+
+	Fixed that "game-starts-before-midnight-and-ends-after-midnight"
+	bug. This will allow games with a duration up to 68 years,
+	hopefully enough for the common player. The first player who
+	breaks this limit should contact me in the year 2065; I will send 
+	him 20 bottles of Austrian beer ("Murauer") :-)
+	
+0.1:	initial release

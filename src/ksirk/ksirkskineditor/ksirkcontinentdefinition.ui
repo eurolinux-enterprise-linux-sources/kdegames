@@ -1,0 +1,87 @@
+<ui version="4.0" >
+ <class>KsirkContinentDefinition</class>
+ <widget class="QDockWidget" name="KsirkContinentDefinition" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>288</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Continent</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents" >
+   <layout class="QVBoxLayout" name="verticalLayout" >
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item>
+       <widget class="QLabel" name="label" >
+        <property name="text" >
+         <string>Bonus:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="KIntNumInput" name="bonus" >
+        <property name="toolTip" >
+         <string>Number of bonus points when owning the full continent</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Number of bonus points when owning the full continent.
+
+At the end of each turn a number of armies is distributed to each player. If one player owns all the countries of this continent, he/she gains this bonus.
+
+The bonus should be proportional to the continent's size and to the difficulty to conquer it or to keep it.</string>
+        </property>
+        <property name="text" stdset="0" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="KPushButton" name="selectcountriesbutton" >
+      <property name="toolTip" >
+       <string>Select the countries contained in this continent</string>
+      </property>
+      <property name="whatsThis" >
+       <string>Click here to select the countries contained in this continent.
+
+A list of all the world's countries will be shown and you will be able to select the countries using the mouse and the Ctrl and Shift keys.</string>
+      </property>
+      <property name="text" >
+       <string>Countries:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="countrieslist" >
+      <property name="toolTip" >
+       <string>Continent's countries</string>
+      </property>
+      <property name="whatsThis" >
+       <string>This is the list of countries currently forming this continent.</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KIntNumInput</class>
+   <extends>QWidget</extends>
+   <header>knuminput.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
